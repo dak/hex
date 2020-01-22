@@ -1,0 +1,240 @@
+module.exports = {
+    root: true,
+    env: {
+        browser: true,
+        node: true
+    },
+    extends: [
+        'plugin:vue/base',
+        '@vue/standard'
+    ],
+    globals: {
+        document: true,
+        navigator: true,
+        window: true
+    },
+    rules: {
+        'accessor-pairs': ['error', {getWithoutSet: false}],
+        'block-scoped-var': 'error',
+        'comma-dangle': ['error', 'never'],
+        complexity: ['error', 5],
+        'consistent-return': 'error',
+        curly: ['error', 'all'],
+        'default-case': 'error',
+        'dot-location': ['error', 'property'],
+        'dot-notation': ['error', {allowKeywords: true}],
+        eqeqeq: 'error',
+        'guard-for-in': 'error',
+        'no-alert': 'error',
+        'no-caller': 'error',
+        'no-case-declarations': 'error',
+        'no-console': 'warn',
+        'no-debugger': 'warn',
+        'no-div-regex': 'error',
+        'no-else-return': 'error',
+        'no-empty-pattern': 'error',
+        'no-eq-null': 'error',
+        'no-eval': 'error',
+        'no-extend-native': 'error',
+        'no-extra-bind': 'error',
+        'no-fallthrough': ['error', {commentPattern: 'falls?\\s?through'}],
+        'no-floating-decimal': 'error',
+        'no-implied-eval': 'error',
+        'no-iterator': 'error',
+        'no-labels': ['error', {allowLoop: true}],
+        'no-lone-blocks': 'error',
+        'no-loop-func': 'error',
+        'no-multi-spaces': 'error',
+        'no-multi-str': 'error',
+        'no-native-reassign': 'error',
+        'no-new-wrappers': 'error',
+        'no-new': 'error',
+        'no-octal': 'error',
+        'no-octal-escape': 'error',
+        'no-proto': 'error',
+        'no-redeclare': 'error',
+        'no-return-assign': 'error',
+        'no-script-url': 'error',
+        'no-self-compare': 'error',
+        'no-sequences': 'error',
+        'no-throw-literal': 'error',
+        'no-unmodified-loop-condition': 'error',
+        'no-unused-expressions': ['error', {allowShortCircuit: true, allowTernary: true}],
+        'no-useless-call': 'error',
+        'no-useless-concat': 'error',
+        'no-useless-escape': 'error',
+        'no-void': 'error',
+        'no-warning-comments': ['warn', {terms: ['fix', 'hack', 'todo', 'xxx'], location: 'anywhere'}],
+        'no-with': 'error',
+        radix: ['error', 'always'],
+        'vars-on-top': 'error',
+        'wrap-iife': ['error', 'inside'],
+
+        strict: ['error', 'never'],
+
+        'no-delete-var': 'error',
+        'no-label-var': 'error',
+        'no-shadow': 'error',
+        'no-undef-init': 'error',
+        'no-undefined': 'off',
+        'no-use-before-define': 'error',
+
+        'sort-imports': ['error', {ignoreDeclarationSort: true}],
+        'sort-vars': 'error',
+        'array-bracket-spacing': ['error', 'never'],
+        'block-spacing': ['error', 'never'],
+        'brace-style': ['error', '1tbs', {allowSingleLine: true}],
+        camelcase: 'error',
+        'comma-spacing': ['error', {before: false, after: true}],
+        'comma-style': ['error', 'last'],
+        'computed-property-spacing': ['error', 'never'],
+        'eol-last': 'error',
+        indent: ['error', 4, {SwitchCase: 0}],
+        'key-spacing': ['error', {beforeColon: false, afterColon: true}],
+        'keyword-spacing': 'error',
+        'linebreak-style': ['error', 'unix'],
+        'max-depth': ['error', 4],
+        'max-len': ['off', 120, 4, {
+            ignoreTemplateLiterals: true,
+            ignoreUrls: true
+        }],
+        'max-nested-callbacks': ['error', 3],
+        'max-params': ['error', 3],
+        'new-cap': 'error',
+        'new-parens': 'error',
+        'no-array-constructor': 'error',
+        'no-implicit-globals': 'error',
+        'no-lonely-if': 'error',
+        'no-mixed-operators': 'error',
+        'no-mixed-spaces-and-tabs': ['error', false],
+        'no-multiple-empty-lines': ['error', {max: 2, maxEOF: 1}],
+        'no-nested-ternary': 'error',
+        'no-new-object': 'error',
+        'no-spaced-func': 'error',
+        'no-trailing-spaces': 'error',
+        'no-unneeded-ternary': 'error',
+        'no-whitespace-before-property': 'error',
+        'object-curly-spacing': ['error', 'never'],
+        'one-var': ['error', 'never'],
+        'operator-linebreak': ['error', 'after'],
+        'padded-blocks': ['error', {
+            blocks: 'never',
+            switches: 'never',
+            classes: 'always'
+        }],
+        'padding-line-between-statements': ['error',
+            {blankLine: 'always', prev: '*', next: 'return'},
+            {blankLine: 'always', prev: ['const', 'let', 'var'], next: '*'},
+            {blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var']},
+            {blankLine: 'always', prev: 'directive', next: '*'},
+            {blankLine: 'any', prev: 'directive', next: 'directive'}
+        ],
+        quotes: ['error', 'single'],
+        'semi-spacing': ['error', {before: false, after: true}],
+        semi: ['error', 'always'],
+        'space-before-blocks': ['error', 'always'],
+        'space-before-function-paren': ['error', {anonymous: 'always', named: 'never'}],
+        'space-infix-ops': 'error',
+        'spaced-comment': ['error', 'always', {exceptions: ['-*']}],
+        'space-in-parens': ['error', 'never'],
+        'wrap-regex': 'error',
+
+        'arrow-parens': ['error', 'always'],
+        'arrow-spacing': 'error',
+        'constructor-super': 'error',
+        'generator-star-spacing': ['error', {before: true, after: false}],
+        'no-async-promise-executor': 'error',
+        'no-class-assign': 'error',
+        'no-const-assign': 'error',
+        'no-dupe-class-members': 'error',
+        'no-duplicate-imports': 'error',
+        'no-new-symbol': 'error',
+        'no-prototype-builtins': 'error',
+        'no-useless-catch': 'error',
+        'no-this-before-super': 'error',
+        'no-useless-computed-key': 'error',
+        'no-useless-constructor': 'error',
+        'no-useless-rename': 'error',
+        'no-var': 'error',
+        'prefer-arrow-callback': 'error',
+        'prefer-const': ['error', {
+            destructuring: 'any',
+            ignoreReadBeforeAssign: false
+        }],
+        'prefer-promise-reject-errors': 'error',
+        'prefer-reflect': ['error', {exceptions: ['delete']}],
+        'prefer-rest-params': 'error',
+        'prefer-spread': 'error',
+        'prefer-template': 'error',
+        'require-yield': 'error',
+        'rest-spread-spacing': ['error', 'never'],
+        'symbol-description': 'error',
+        'template-curly-spacing': ['error', 'never'],
+        'yield-star-spacing': ['error', {before: false, after: true}],
+
+        'vue/component-name-in-template-casing': ['error', 'kebab-case', {ignores: []}],
+        'vue/html-indent': ['off', 4, {
+            attribute: 1,
+            baseIndent: 1,
+            closeBracket: 0,
+            alignAttributesVertically: true,
+            ignores: []
+        }],
+        'vue/html-self-closing': ['error', {
+            html: {
+                void: 'never',
+                normal: 'never',
+                component: 'never'
+            },
+            svg: 'never',
+            math: 'never'
+        }],
+        'vue/multiline-html-element-content-newline': ['off', {
+            ignores: ['pre', 'textarea']
+        }],
+        'vue/mustache-interpolation-spacing': ['error', 'never'],
+        'vue/order-in-components': ['error', {
+            order: [
+                'el',
+                'name',
+                'parent',
+                'functional',
+                ['delimiters', 'comments'],
+                ['components', 'directives', 'filters'],
+                'extends',
+                'mixins',
+                'inheritAttrs',
+                'model',
+                ['props', 'propsData'],
+                'data',
+                'computed',
+                'watch',
+                'LIFECYCLE_HOOKS',
+                'methods',
+                ['template', 'render'],
+                'renderError'
+            ]
+        }],
+        'vue/singleline-html-element-content-newline': ['off', {
+            ignoreWhenNoAttributes: true,
+            ignores: ['pre', 'textarea']
+        }]
+    },
+    parserOptions: {
+        parser: 'babel-eslint',
+        ecmaVersion: 2018,
+        sourceType: 'module'
+    },
+    plugins: [
+        'babel'
+    ],
+    overrides: [{
+        files: [
+            '**/__tests__/*.{j,t}s?(x)',
+            '**/tests/unit/**/*.spec.{j,t}s?(x)'
+        ],
+        env: {
+            jest: true
+        }
+    }]
+};

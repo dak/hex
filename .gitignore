@@ -1,0 +1,8 @@
+node_modules
+/dist
+
+# Log files
+npm-debug.log*
+
+#Electron-builder output
+/dist_electron

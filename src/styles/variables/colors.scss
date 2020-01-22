@@ -1,0 +1,41 @@
+// https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+$gray: #74848d;
+
+$colors: (
+    gray: (
+        50: #f0f0f0,
+        100: #dadada,
+        200: #bfc2c3,
+        300: #a1a9ae,
+        400: #8a969d,
+        500: $gray,
+        600: #67757c,
+        700: #414b50,
+        800: #262b29,
+        900: #111315
+    )
+);
+
+@function color($color, $scale: 500) {
+    $hue: null;
+
+    @if map-has-key($colors, $color) {
+        $hue: map-get($colors, $color);
+    }
+
+    @if (type-of($hue) == color) {
+        @return map-get($colors, $color);
+    }
+
+    @if (type-of($hue) == map) {
+        @if map-has-key($hue, $scale) {
+            @return map-get($hue, $scale);
+        }
+
+        @warn 'Unknown value `#{$scale}` in `#{$color}`.';
+        @return null;
+    }
+
+    @warn 'Unknown `#{$color}` in $colors.';
+    @return null;
+}
